@@ -1,0 +1,1 @@
+NecessaryDataNotAvailableError = Class.new(StandardError)
