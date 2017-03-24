@@ -11,6 +11,7 @@ class Bomb
   element :bomb_status,         id: "bomb-status"
   element :bomb_state,          id: "change-bomb-state"
   element :detonation,          id: "detonation"
+  element :notice,              id: "flash"
 
   element :zero,   data_value: "0"
   element :one,    data_value: "1"
@@ -103,6 +104,52 @@ class Bomb
 
   def active_bomb_message
     bomb_message_condition("active")
+  end
+
+  # Bomb Messages
+
+  def confirm_incorrect_activation_message
+    message = bomb_message
+    expect(message).to eq(incorrect_activation_message)
+    message
+  end
+
+  def confirm_incorrect_deactivation_message
+    message = bomb_message
+    expect(message).to eq(incorrect_deactivation_message)
+    message
+  end
+
+  def confirm_invalid_activation_message
+    message = bomb_message
+    expect(message).to eq(invalid_activation_message)
+    message
+  end
+
+  def confirm_invalid_deactivation_message
+    message = bomb_message
+    expect(message).to eq(invalid_deactivation_message)
+    message
+  end
+
+  def incorrect_activation_message
+    bomb_message_condition("incorrect-activation")
+  end
+
+  def incorrect_deactivation_message
+    bomb_message_condition("incorrect-deactivation")
+  end
+
+  def invalid_activation_message
+    bomb_message_condition("invalid-activation")
+  end
+
+  def invalid_deactivation_message
+    bomb_message_condition("invalid-deactivation")
+  end
+
+  def bomb_message
+    notice.text
   end
 
   # Timer State
