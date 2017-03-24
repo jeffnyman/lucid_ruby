@@ -12,7 +12,7 @@ Feature: Successful Bomb Provisioning
   Background:
     Given an authenticated user on the overlord page
 
-  Scenario:
+  Scenario: Bombs are not active by default
     Given a provisioned bomb
     Then  the bomb will display as inactive
 
