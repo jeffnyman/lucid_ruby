@@ -16,3 +16,11 @@ gem 'rspec'
 # Data Accessible is a gem to help with data configuration.
 
 gem 'data_accessible'
+
+# If you want to do color effects:
+
+gem 'colorize'
+
+# For word/number conversion:
+
+gem 'to_words'

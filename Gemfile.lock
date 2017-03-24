@@ -4,6 +4,7 @@ GEM
     builder (3.2.3)
     childprocess (0.6.2)
       ffi (~> 1.0, >= 1.0.11)
+    colorize (0.8.1)
     cucumber (2.4.0)
       builder (>= 2.1.2)
       cucumber-core (~> 1.5.0)
@@ -42,7 +43,8 @@ GEM
     syntax (1.2.1)
     tapestry (0.2.0)
       watir (~> 6.0)
-    watir (6.2.0)
+    to_words (1.1.0)
+    watir (6.2.1)
       selenium-webdriver (~> 3.0)
     websocket (1.2.4)
 
@@ -50,11 +52,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorize
   cucumber
   data_accessible
   rspec
   syntax
   tapestry
+  to_words
 
 BUNDLED WITH
    1.14.5
