@@ -26,6 +26,12 @@ class Navigation
     admin_only_error if expect_fail
   end
 
+  def to_stardate_page
+    open_page_list
+    stardate.click
+    expect(stardate_logo.exists?).to be true
+  end
+
   private
 
   def open_page_list
